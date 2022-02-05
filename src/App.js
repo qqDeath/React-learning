@@ -20,8 +20,6 @@ const App = (props) => {
             element={
               <Dialogs
                 store={props.store}
-                /* dialogs={props.state.dialogsPage.dialogs}
-                messages={props.state.dialogsPage.messages} */
                 dispatch={props.dispatch}
               />
             }
