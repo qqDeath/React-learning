@@ -8,8 +8,8 @@ import MyPosts from "./MyPosts";
 
 const mapStateToProps = (state) => {
   return {
-    newPostText: state.newPostText,
     posts: state.profilePage.posts,
+    newPostText: state.newPostText,
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -27,6 +27,7 @@ const mapDispatchToProps = (dispatch) => {
 const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
 
 export default MyPostsContainer;
+
 // Better comments
 //*  Better Comments
 //! Better Comments
