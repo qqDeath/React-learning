@@ -38,9 +38,3 @@ const MyPosts = (props) => {
 };
 
 export default MyPosts;
-
-/* import {
-  addPostActionCreator,
-  updateNewPostTextActionCreator,
-} from "../../../redux/profile-reducer";
-import MyPostsContainer from "./MyPostsContainer"; */

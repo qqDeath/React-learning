@@ -8,7 +8,7 @@ let initialState = {
     { id: 3, message: "Heretic Anthem", likeCounter: 666 },
     { id: 4, message: "joass", likeCounter: 32 },
   ],
-  newPostText: "Enter text here",
+  newPostText: "Why are you here?",
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -19,18 +19,17 @@ const profileReducer = (state = initialState, action) => {
         message: state.newPostText,
         likeCounter: 0,
       };
-
-      let stateCopy = { ...state }; //*shallow state copy
-
-      stateCopy.posts = [...state.posts]; //* deep copy
-      stateCopy.posts.push(newPost);
-      stateCopy.newPostText = "";
-      return stateCopy;
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: "",
+      };
     }
     case UPDATE_NEW_POST_TEXT: {
-      let stateCopy = { ...state };
-      stateCopy.newPostText = action.newText;
-      return stateCopy;
+      return {
+        ...state,
+        newPostText: action.newText,
+      };
     }
     default:
       return state;
